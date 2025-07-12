@@ -57,10 +57,12 @@ It features a sleek, dark-themed UI using **EJS templating** for dynamic renderi
    MONGO_URI=your_mongodb_connection_uri
 
 
-  👤 Author
-   Rishii Jadhav
-   🔗 LinkedIn
-   🔗 GitHub
+ ## 👤 Author
+
+**Rishii Jadhav**  
+🔗 [LinkedIn](https://www.linkedin.com/in/rishii-jadhav)  
+🔗 [GitHub](https://github.com/RushikeshJadhav2004)
+
 
 📝 License
 This project is licensed under the MIT License.
