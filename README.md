@@ -31,9 +31,10 @@ It features a sleek, dark-themed UI using **EJS templating** for dynamic renderi
 
 ## 📸 Screenshots
 
-| Upload Form | Uploaded Preview |
-|-------------|------------------|
-| ![Form](https://via.placeholder.com/300x200?text=Upload+Form) | ![Preview](https://via.placeholder.com/300x200?text=Uploaded+Image) |
+| Preview | 
+|-------------|
+| ![Preview](<img width="1365" height="665" alt="Screenshot 2025-07-13 010730" src="https://github.com/user-attachments/assets/858a5ab0-4b5a-4bd3-bc36-515617dee8cd" />
+) 
 
 > *(Tip: Replace these placeholder URLs with real screenshots from your app)*
 
@@ -68,11 +69,53 @@ project-root/
        Create a .env file in the root folder:
 
    PORT=2000
+   
   CLOUD_NAME=your_cloudinary_cloud_name
   CLOUD_API_KEY=your_cloudinary_api_key
   CLOUD_API_SECRET=your_cloudinary_api_secret
   MONGO_URI=your_mongodb_connection_uri
 
 4.  Run the application
+      npm start
+
+
+🌐 Deployment
+To deploy this app on Render:
+
+Push your code to GitHub
+
+Go to Render.com → New → Web Service
+
+Connect your GitHub repo
+
+Set your build command as: npm install
+
+Set your start command as: npm start
+
+Add your .env variables in the dashboard
+
+Done! 🎉 Your app is live.
+
+
+👤 Author
+Rishii Jadhav
+🔗 LinkedIn
+🔗 GitHub
+
+
+📝 License
+This project is licensed under the MIT License.
+
+
+
+---
+
+Let me know if you’d like:
+- A **LinkedIn post caption**
+- A `deploy` badge
+- Feature ideas to enhance the app further (like gallery view, delete image, multi-upload)
+
+You're ready to showcase this project! 🚀
+    
 
     
