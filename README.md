@@ -60,7 +60,7 @@ It features a sleek, dark-themed UI using **EJS templating** for dynamic renderi
  ## 👤 Author
 
 **Rishii Jadhav**  
-🔗 [LinkedIn]([https://www.linkedin.com/in/rishii-jadhav](http://www.linkedin.com/in/rushikeshjadhav2004))  
+🔗 [LinkedIn]([(http://www.linkedin.com/in/rushikeshjadhav2004))  
 🔗 [GitHub](https://github.com/RushikeshJadhav2004)
 
 
