@@ -56,16 +56,7 @@ It features a sleek, dark-themed UI using **EJS templating** for dynamic renderi
    CLOUD_API_SECRET=your_cloudinary_api_secret
    MONGO_URI=your_mongodb_connection_uri
 
-    ```bash
-    project-root/
-├── public/ # Static assets (optional)
-├── views/
-│ └── index.ejs # Frontend upload form
-├── server.js # Main Express server
-├── .env # Environment variables (not committed)
-├── .gitignore
-├── package.json
-└── README.md
+   
 
 
  ## 👤 Author
