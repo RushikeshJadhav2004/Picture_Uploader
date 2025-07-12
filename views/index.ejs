@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Uploader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #121212;
+        color: #f0f0f0;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: #1f1f1f;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .navbar h2 {
+        margin: 0;
+        color: #ff8a65;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 500;
+      }
+
+      .navbar a:hover {
+        color: #ff8a65;
+      }
+
+      /* Container */
+      .container {
+        background: #1e1e1e;
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        margin: 40px auto;
+        text-align: center;
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        font-size: 32px;
+        color: #ffab91;
+        margin-bottom: 25px;
+      }
+
+      .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      input[type="file"],
+      input[type="submit"] {
+        width: 90%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      input[type="file"] {
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      input[type="file"]:hover {
+        background: #444;
+        transform: scale(1.02);
+      }
+
+      input[type="submit"] {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      }
+
+      /* Uploaded image */
+      #upload-image-container {
+        margin-top: 30px;
+        text-align: center;
+        color: #fff;
+      }
+
+      #upload-image-container img {
+        margin-top: 15px;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        border: 2px solid #ff8a65;
+        box-shadow: 0 10px 20px rgba(255, 138, 101, 0.4);
+      }
+
+      /* Footer */
+      footer {
+        background: #1f1f1f;
+        padding: 20px 10px;
+        text-align: center;
+        color: #aaa;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #ff8a65;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .navbar a {
+          margin: 5px 0 0 0;
+        }
+
+        .container {
+          margin: 20px;
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h2>ImageUploader</h2>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Upload Form -->
+    <div class="container">
+      <h1>Upload Your Image</h1>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <input type="file" name="file" id="file-input" required />
+        </div>
+        <input type="submit" value="Upload" />
+      </form>
+    </div>
+
+    <!-- Uploaded Image -->
+    <div id="upload-image-container">
+      <% if (url) { %>
+        <h2>File Uploaded Successfully!</h2>
+        <img src="<%= url %>" alt="Uploaded Image" />
+      <% } %>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; <%= new Date().getFullYear() %> ImageUploader | Made with ❤️ by Rushikesh
+      <br />
+      <a href="https://github.com/" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+    </footer>
+  </body>
+</html>
